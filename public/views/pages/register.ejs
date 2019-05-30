@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="favicon.png">
+
+  <title>Rent a car Tulcea | Contact</title>
+  <!-- Head -->
+  <%- include('../partials/head') %>
+
+  <style>
+    body {
+      margin: auto 0;
+      font-family: 'Lora';
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65))), url("img/bg3.jpg");
+      background: linear-gradient(rgba(47, 23, 15, 0.65)), url("img/bg3.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-lower">Inregistrare</span>
+  </h1>
+
+  <!-- Nav -->
+  <%- include('../partials/nav') %>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Inregistrare</h5>
+            <form class="form-signin">
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password"
+                  required>
+                <input type="password" id="inputPassword2" name="password2" class="form-control" placeholder="Password"
+                  required>
+              </div>
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="button"
+                onclick="register()">Inregistrare</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <%- include('../partials/footer') %>
+
+
+</body>
+
+<script>
+  register = function () {
+    if ($('#inputPassword').val() == $('#inputPassword2').val() && $('#inputPassword').val().length > 6) {
+      $.ajax({
+        type: "POST",
+        url: '/register',
+        data: {
+          email: $('#inputEmail').val(),
+          password: $('#inputPassword').val()
+        },
+        success: function (msg) {
+        }
+      });
+    } else {
+      alert('Password is invalid');
+    }
+
+  }
+</script>
+
+</html>

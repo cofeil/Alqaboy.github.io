@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="favicon.png">
+
+  <title>Rent a car Tulcea | Contact</title>
+
+  <!-- Head -->
+  <%- include('../partials/head') %>
+
+  <style>
+    body {
+      margin: auto 0;
+      font-family: 'Lora';
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65))), url("img/bg3.jpg");
+      background: linear-gradient(rgba(47, 23, 15, 0.65)), url("img/bg3.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .btn {
+      margin-left: 37%;
+      margin-top: 2em;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-lower">Programul nostru </span>
+  </h1>
+
+  <!-- Nav -->
+  <%- include('../partials/nav') %>
+
+  <section class="page-section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <div class="cta-inner text-center rounded">
+            <h2 class="section-heading mb-5">
+              <span class="section-heading-upper">Veniți chiar acum!</span>
+              <span class="section-heading-lower">Suntem deschiși</span>
+            </h2>
+            <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+              <li class="list-unstyled-item list-hours-item d-flex">
+                Duminică
+                <span class="ml-auto">Închis</span>
+              </li>
+              <li class="list-unstyled-item list-hours-item d-flex">
+                Luni
+                <span class="ml-auto">7:00 AM - 8:00 PM</span>
+              </li>
+              <li class="list-unstyled-item list-hours-item d-flex">
+                Marți
+                <span class="ml-auto">7:00 AM - 8:00 PM</span>
+              </li>
+              <li class="list-unstyled-item list-hours-item d-flex">
+                Miercuri
+                <span class="ml-auto">7:00 AM - 8:00 PM</span>
+              </li>
+              <li class="list-unstyled-item list-hours-item d-flex">
+                Joi
+                <span class="ml-auto">7:00 AM - 8:00 PM</span>
+              </li>
+              <li class="list-unstyled-item list-hours-item d-flex">
+                Vineri
+                <span class="ml-auto">7:00 AM - 8:00 PM</span>
+              </li>
+              <li class="list-unstyled-item list-hours-item d-flex">
+                Sâmbătă
+                <span class="ml-auto">9:00 AM - 5:00 PM</span>
+              </li>
+            </ul>
+            <p class="address mb-5">
+              <em>
+                <strong>Str. Chiparosului nr.2</strong>
+                <br>
+                Tulcea, jud. Tulcea
+              </em>
+            </p>
+            <p class="mb-0">
+              <small>
+                <em>Ne puteți suna oricând!</em>
+              </small>
+              <br>
+              (40) 746-889-148
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section about-heading">
+    <div class="container">
+      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/prieteni.jpg" alt="">
+      <div class="about-heading-content">
+        <div class="row">
+          <div class="col-xl-9 col-lg-10 mx-auto">
+            <div class="bg-faded rounded p-5">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-upper">Atenție deosebită,</span>
+                <span class="section-heading-lower">Clientelă satisfăcută!</span>
+              </h2>
+              <p>Odată crescând numărul clientelei, s-a îmbunătățit și calitatea serviciilor noastre. Așadar, investiții
+                au fost făcute în continuare în vederea mulțumirii persoanelor ce ne pășesc cu drag pragul locașului
+                nostru.</p>
+              <p class="mb-0">Vă garantăm că vă veți împrieteni îndată cu personalul nostru, dat fiind dovadă și faptul
+                că mulți clienți, care ne-au devenit și prieteni, înca țin legătura cu noi, și ne vizitatează cu fiecare
+                ocazie</p>
+              <div class="intro-button mx-auto">
+                <a class="btn btn-primary btn-xl"
+                  href="https://www.google.com/maps/place/Aleea+Chiparosului+2,+Tulcea/@45.1696359,28.7865131,18z/data=!3m1!4b1!4m5!3m4!1s0x40b75968bf42fee1:0x38d2d40e53557aae!8m2!3d45.1696359!4d28.787546"
+                  target="_blank">Vizitați-ne astăzi!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <%- include('../partials/footer') %>
+
+
+
+</body>
+
+<!-- Script ptr. activarea datei -->
+<script>
+  $('.list-hours li').eq(new Date().getDay()).addClass('today');
+</script>
+
+</html>

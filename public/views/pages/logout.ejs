@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="favicon.png">
+
+  <title>Rent a car Tulcea </title>
+  <!-- Head -->
+  <%- include('../partials/head') %>
+
+
+  <style>
+    body {
+      margin: auto 0;
+      font-family: 'Lora';
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65))), url("img/bg3.jpg");
+      background: linear-gradient(rgba(47, 23, 15, 0.65)), url("img/bg3.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-lower">Logare</span>
+  </h1>
+
+  <!-- Nav -->
+  <%- include('../partials/nav') %>
+  <div class="container">
+    <div class="row">
+      <h2 style="color:aliceblue; text-align: center">
+        You are logged off
+      </h2>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <%- include('../partials/footer') %>
+
+
+</body>
+
+<!-- Script ptr. activarea datei -->
+<script>
+  document.cookie = "isLogged=";
+</script>
+
+</html>

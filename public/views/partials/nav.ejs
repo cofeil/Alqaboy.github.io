@@ -1,0 +1,86 @@
+<!-- Nav -->
+<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Meniu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="index">Acasă
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="despre">Despre noi</a>
+                </li>
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="oferte">Oferte</a>
+                </li>
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="contact">Contact</a>
+                </li>
+                <li class="nav-item px-lg-4" id="cereri" style="display:none">
+                    <a class="nav-link text-uppercase text-expanded" href="cereri">Cereri</a>
+                </li>
+                <li class="nav-item px-lg-4" id="login" style="display:block">
+                    <a class="nav-link text-uppercase text-expanded" href="login">Log in</a>
+                </li>
+                <li class="nav-item px-lg-4" id="register" style="display:block">
+                    <a class="nav-link text-uppercase text-expanded" href="register">Register</a>
+                </li>
+                <li class="nav-item px-lg-4" id="logout" style="display:none">
+                    <a class="nav-link text-uppercase text-expanded" href="logout" onclick="logout()">Log out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<script>
+
+
+    if (getCookie('isLogged')) {
+        document.getElementById("login").style = "display:none";
+        document.getElementById("cereri").style = "";
+        document.getElementById("logout").style = "";
+        document.getElementById("register").style = "";
+    } else {
+        document.getElementById("login").style = "";
+        document.getElementById("cereri").style = "display:none";
+        document.getElementById("logout").style = "display:none";
+        document.getElementById("register").style = "display:none";
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    function logout() {
+        document.cookie = "isLogged=";
+    }
+
+    // Test node rate limiter
+    // setInterval(function(){
+    // $.ajax({
+    //   type: "GET",
+    //   url: '/testApi',     
+    //   success: function(msg){
+    //     console.log(msg);
+    //   }  
+    // });
+    // },1000)
+
+</script>

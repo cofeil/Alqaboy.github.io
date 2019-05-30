@@ -1,0 +1,16 @@
+<input type="hidden" id="masina_id" name="masina_id" value="<%= masina.id %>">
+
+<div data-toggle="tooltip" data-html="true" title="
+
+<ul class='list1'>
+        <li><%=masina.marca %></li>                
+        <li><%= masina.model %></li>
+        <li>Motor:<%= masina.cmc %></li>                
+        <li>Carburant: <%= masina.combustibil_nume %></li>
+        <li>Pret: <%= masina.pret %></li>
+        <li>Status: <%= masina.status %></li>
+        <li>Anul Fabricatiei: <%= new Date(masina.an_fabricatie).getFullYear() %> / <%= (new Date(masina.an_fabricatie).getMonth() + 1) %>/<%= new Date(masina.an_fabricatie).getDate(); %></li>
+    </ul>
+">
+    <%=masina.marca %> <%= masina.model %>
+</div>

@@ -1,0 +1,21 @@
+{
+  "name": "laur",
+  "version": "1.0.0",
+  "description": "Aplicatie de gestiune a unei companii de inchirieri auto",
+  "main": "main.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-rate-limit": "^3.5.1",
+    "mysql": "^2.16.0",
+    "nodemailer": "^6.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node main.js"
+  },
+  "author": "Cofei Laurentiu",
+  "license": "ISC"
+}

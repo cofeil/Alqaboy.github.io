@@ -1,0 +1,73 @@
+<input type="hidden" id="cerere_id" name="cerere_id" value="<%= cerere.id %>">
+<tr>
+  <th scope="row"># <%= cerere.masina_id %> </th>
+<td>   
+  <%- include('../partials/car-cereri', {masina: cerere }); %>
+</td>
+<td><%= cerere.nume %></td>
+<td><%= cerere.prenume %></td>
+<td><%= cerere.telefon %></td>
+<td><%= cerere.email %></td>
+<td><%= cerere.suplimentar %></td>
+<td><%= new Date(cerere.perioadaridicare).getFullYear() %> / <%= (new Date(cerere.perioadaridicare).getMonth() + 1) %>/<%= new Date(cerere.perioadaridicare).getDate(); %> </td>
+<td><%= new Date(cerere.perioadapredare).getFullYear() %> / <%= (new Date(cerere.perioadapredare).getMonth() + 1) %>/<%= new Date(cerere.perioadapredare).getDate(); %> </td>
+<td><%= cerere.cerereStatusNume %></td>
+
+<td>
+    <button type="submit" id="aproba" class="btn btn-success" onclick="aproba('<%= cerere.cerere_id %>','<%= cerere.masina_id %>', '<%= cerere.email %>' )">Aproba</button>        
+</td>
+<td>
+    <button type="submit" id="respinge" class="btn btn-warning" onclick="respinge('<%= cerere.cerere_id %>','<%= cerere.masina_id %>')" >Respinge</button>
+</td>
+<td>
+    <button type="submit" id="respinge" class="btn btn-danger" onclick="sterge('<%= cerere.cerere_id %>','<%= cerere.masina_id %>')" >Sterge</button>
+</td>
+</tr>     
+
+<script>
+  aproba = function(id,masina_id,email){
+    $.ajax({
+      type: "POST",
+      url: '/cereri',
+      data: {
+        action: 'aproba',
+        cerere_id:id,
+        masina_id:masina_id,
+        email:email
+      },
+      success: function(msg){
+        alert("Aprobat");
+        location.reload();
+      }  
+    });
+  }
+  respinge = function(id,masina_id){
+    $.ajax({
+      type: "POST",
+      url: '/cereri',
+      data: {
+        action: 'respinge',
+        cerere_id: id,
+        masina_id:masina_id
+      },
+      success: function(msg){
+        alert("Respins");
+        location.reload();
+      }  
+    });
+  }
+  sterge = function(id){
+    $.ajax({
+      type: "POST",
+      url: '/cereri',
+      data: {
+        action: 'sterge',
+        cerere_id: id
+      },
+      success: function(msg){
+        alert("Sters");
+        location.reload();
+      }  
+    });
+  }
+</script>

@@ -1,0 +1,23 @@
+<div class="col-md-6 col-lg-4 col-xl-3">
+    <div class="jumbotron">
+        <img src="<%= masina.imagini_path ? masina.imagini_path : 'img/car.png' %>" 400px>
+        <hr class="my-4">
+        <p><strong> <%= masina.marca %> <%= masina.model %></strong><br></p>
+
+        <input type="hidden" id="masina_id" name="masina_id" value="<%= masina.id %>">
+        <ul class="list1">
+            <li>Motor(cmc): <%= masina.cmc %></li>
+            <li>Carburant: <%= masina.combustibil_nume %></li>
+            <li>Pret: <%= masina.pret %></li>
+            <!-- <li>Status: <%= masina.status %></li> -->
+            <li>An fabricatie: <%= new Date(masina.an_fabricatie).getFullYear() %> /
+                <%= (new Date(masina.an_fabricatie).getMonth() + 1) %>/<%= new Date(masina.an_fabricatie).getDate(); %>
+            </li>
+            <li> <%= masina.observatii ? 'Obs: '+ masina.observatii: '' %></li>
+        </ul>
+        <div style = "<%= masina.status == 'active' ? 'display: block;' :  'display: none;' %>">
+            <a id="js-id-rezerva" class="btn btn-primary btn-lg" href="<%= '/reserva?id='+ masina.id %>"
+                role="button">Rezervă acum</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="favicon.png">
+
+  <title>Rent a car Tulcea | Contact</title>
+  <!-- Head -->
+  <%- include('../partials/head') %>
+
+  <style>
+    body {
+      font-family: 'Lora';
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65))), url("img/bg1.jpg");
+      background: linear-gradient(rgba(47, 23, 15, 0.65)), url("img/bg1.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .site-heading .site-heading-upper {
+      font-size: 5rem;
+      font-weight: 100;
+      line-height: 1.5rem;
+    }
+
+    .site-heading .site-heading-lower {
+      display: block;
+      font-size: 2rem;
+      font-weight: 600;
+      font-family: 'Kaushan Script', cursive;
+    }
+
+    .section-heading-upper {
+      font-family: 'Kaushan Script', cursive;
+      font-size: 12px;
+      display: block;
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: none;
+    }
+
+    .section-heading-lower {
+      display: block;
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: none;
+    }
+
+    #team {
+      margin-bottom: 12em;
+    }
+
+    .hatz {
+      font-style: italic;
+      font-size: 1em;
+      color: white;
+      font-family: Arial;
+    }
+
+    .team-member {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .team-member img {
+      width: 225px;
+      height: 225px;
+      border: 7px solid #fff;
+    }
+
+    .team-member h4 {
+      margin-top: 25px;
+      margin-bottom: 0;
+      text-transform: none;
+    }
+
+    .team-member p {
+      margin-top: 0;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-lower">Despre noi </span>
+  </h1>
+
+  <!-- Nav -->
+  <%- include('../partials/nav') %>
+
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper cite"><cite>"Dacă nu arunci o privire la mașină după ce ai parcat-o, înseamnă că nu
+        deții mașina potrivită." - Anonim </cite></span><br>
+    <span class="site-heading-lower text-primary mb-3 mb3">...să vă povestim despre noi...
+  </h1>
+  <section class="page-section about-heading">
+    <div class="container">
+      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/despre.jpg" alt="parc auto"
+        style="border-radius: 55px">
+      <div class="about-heading-content">
+        <div class="row">
+          <div class="col-xl-9 col-lg-10 mx-auto">
+            <div class="bg-faded rounded p-5 p5">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-upper">Câte o mașină, câte o mașină...</span>
+                <span class="section-heading-lower">Cum ne-am inceput activitatea?</span>
+              </h2>
+              <p>Ne-am deschis ușile prima oară în anul 2017, cu un număr de doar 5 mașini, Tulcea fiind și un orășel
+                micuț. După nici un an de zile numărul de clienți a început să crească exponențial, datorită turismului,
+                așadar am început să mărim parcul auto și numărul de mașini.</p>
+              <p class="mb-0">Astfel, treptat, cu <em>muncă</em> și <em>devotament</em> față de clienți, am reușit să
+                devenim printre cele mai apreciate firme de închirieri auto din Dobrogea.</p>
+            </div>
+          </div>
+        </div>
+      </div><br>
+    </div>
+  </section>
+
+  <!-- ECHIPA -->
+  <section id="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase" style="color:rgb(154, 133, 133); font-family: Raleway">Echipa
+            noastră</h2>
+          <h3 class="section-subheading" style="color: white; font-family: Monotype, cursive; font-size: 20px">
+            <em>Împreună pentru voi</em></h3><br>
+        </div><br>
+      </div><br>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/membru1.jpg" alt="">
+            <h4 class="hatz">Ioana Rotariu</h4>
+            <p class="hatz">Director</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/membru2.jpg" alt="">
+            <h4 class="hatz">Alexandra Popescu</h4>
+            <p class="hatz">Manager</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/membru3.jpg" alt="">
+            <h4 class="hatz">Ionut Petrescu</h4>
+            <p class="hatz">Director Consultant</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <%- include('../partials/footer') %>
+
+
+</body>
+
+<!-- Script ptr. activarea datei -->
+<script>
+  $('.list-hours li').eq(new Date().getDay()).addClass('today');
+</script>
+
+</html>
